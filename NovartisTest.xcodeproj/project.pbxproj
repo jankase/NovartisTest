@@ -40,6 +40,9 @@
 		1D33DA6323D8EAE800F1BF09 /* NovartisTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovartisTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D33DA6723D8EAE800F1BF09 /* NovartisTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovartisTestTests.swift; sourceTree = "<group>"; };
 		1D33DA6923D8EAE800F1BF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		931AD41E2FC95711BC9C6F63 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		931ADB1D76FBD27B8920ED32 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		931ADFCA19403B43EDED2DB5 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,9 @@
 				1D33DA4D23D8EAE700F1BF09 /* NovartisTest */,
 				1D33DA6623D8EAE800F1BF09 /* NovartisTestTests */,
 				1D33DA4C23D8EAE700F1BF09 /* Products */,
+				931ADFCA19403B43EDED2DB5 /* .swiftlint.yml */,
+				931ADB1D76FBD27B8920ED32 /* .gitignore */,
+				931AD41E2FC95711BC9C6F63 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -352,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -369,6 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
 				INFOPLIST_FILE = NovartisTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
 				INFOPLIST_FILE = NovartisTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
