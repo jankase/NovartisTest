@@ -1,0 +1,5 @@
+github "Alamofire/Alamofire"
+github "SnapKit/SnapKit"
+github "DeclarativeHub/ReactiveKit"
+github "DeclarativeHub/Bond"
+github "Swinject/Swinject"
