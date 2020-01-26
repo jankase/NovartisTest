@@ -11,7 +11,7 @@ import ReactiveKit
 class SearchModel: ReactiveExtensionsProvider {
   var searchUseCase: GetSecurity
   var errorMessageSubject: PassthroughSubject<String, Never> = .init()
-  var cellsSubject: Subject<[SearchCellModel], Never> = .init()
+  var cellsInfo: Property<[SearchCellModel]> = .init([])
 
   init(searchUseCase pSearchUseCase: GetSecurity) {
     searchUseCase = pSearchUseCase
@@ -19,17 +19,22 @@ class SearchModel: ReactiveExtensionsProvider {
 
   func handleSearch(text pText: String?) {
     guard let lSymbolCode = pText else {
-      cellsSubject.send([])
+      cellsInfo.send([])
       return
     }
     searchUseCase.getSecurities(symbolCode: lSymbolCode) { [weak self] pSecurityResult in
       guard let lSelf = self else { return }
       switch pSecurityResult {
       case .success(let lSecurities):
-        lSelf.cellsSubject.send(lSecurities.map { SearchCellModel(security: $0) })
+        lSelf.cellsInfo.send(lSecurities.map { SearchCellModel(security: $0) })
       case .failure(let lError):
         lSelf.errorMessageSubject.send("Failed to download security info from net: \(lError.localizedDescription)")
       }
     }
+  }
+
+  func handleDetailDisclosureTapped(indexPath pIndexPath: IndexPath) {
+    let lSymbol = cellsInfo.value[pIndexPath.row].symbol
+    Router.shared.showDetail(symbol: lSymbol)
   }
 }

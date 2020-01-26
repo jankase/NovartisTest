@@ -11,6 +11,6 @@ extension ReactiveExtensions where Base: SearchModel {
     base.errorMessageSubject.toSignal()
   }
   var cells: SafeSignal<[SearchCellModel]> {
-    base.cellsSubject.toSignal()
+    base.cellsInfo.toSignal()
   }
 }

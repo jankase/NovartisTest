@@ -46,8 +46,8 @@ class SearchController: UIViewController {
       $0.top.equalTo(lSearchBar.snp.bottom)
       $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
     }
-    _model.reactive.cells.bind(to: lTableView, createCell: self._createCell)
-    lTableView.reactive.detailDisclosureTapped.observeNext(with: self._detailTapped).dispose(in: _bag)
+    _model.reactive.cells.bind(to: lTableView, createCell: _createCell)
+    lTableView.reactive.detailDisclosureTapped.observeNext(with: _model.handleDetailDisclosureTapped).dispose(in: _bag)
     _tableView = lTableView
   }
 
@@ -68,9 +68,5 @@ class SearchController: UIViewController {
     lCell?.detailTextLabel?.text = lModel.subtitle
     lCell?.accessoryType = .detailButton
     return lCell!
-  }
-
-  private func _detailTapped(indexPath pIndexPath: IndexPath) {
-    NSLog("Detail tapped \(pIndexPath)")
   }
 }

@@ -3,8 +3,8 @@
 // Copyright (c) 2020 Jan Kaše. All rights reserved.
 //
 
-import UIKit
 import Swinject
+import UIKit
 
 class Router {
   static var shared: Router = .init()
@@ -17,6 +17,13 @@ class Router {
 
   func rootViewController() -> UIViewController {
     let lNavController = UINavigationController(rootViewController: sharedResolver.resolve(SearchController.self)!)
+    _navigationController = lNavController
     return lNavController
   }
+
+  func showDetail(symbol pSymbol: String) {
+    _navigationController?.pushViewController(UIViewController(), animated: true)
+  }
+
+  private var _navigationController: UINavigationController?
 }

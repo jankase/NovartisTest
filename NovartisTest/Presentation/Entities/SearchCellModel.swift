@@ -9,10 +9,12 @@ import Foundation
 class SearchCellModel: Comparable {
   var title: String?
   var subtitle: String?
+  var symbol: String
 
   init(security pSecurity: Security) {
     title = pSecurity.name
     subtitle = pSecurity.symbol
+    symbol = pSecurity.symbol
     _score = pSecurity.score
   }
 
