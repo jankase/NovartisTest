@@ -15,10 +15,6 @@ class SearchController: UIViewController {
     navigationItem.title = "Symbols"
   }
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-  }
-
   required init?(coder: NSCoder) {
     fatalError("Not supported")
   }
@@ -47,10 +43,24 @@ class SearchController: UIViewController {
       $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
     }
     _model.reactive.cells.bind(to: lTableView, createCell: _createCell)
-    lTableView.reactive.detailDisclosureTapped.observeNext(with: _model.handleDetailDisclosureTapped).dispose(in: _bag)
+    lTableView.reactive.detailDisclosureTapped
+        .observeNext { [weak self] pIndexPath in
+          self?._searchBar?.resignFirstResponder()
+          DispatchQueue.main.async {
+            self?._model.handleDetailDisclosureTapped(indexPath: pIndexPath)
+          }
+        }
+        .dispose(in: _bag)
     _tableView = lTableView
   }
 
+  override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    .portrait
+  }
+
+  override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+    .portrait
+  }
   private var _model: SearchModel
   private weak var _tableView: UITableView?
   private weak var _searchBar: UISearchBar?

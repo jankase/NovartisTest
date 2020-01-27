@@ -22,7 +22,7 @@ class Router {
   }
 
   func showDetail(symbol pSymbol: String) {
-    _navigationController?.pushViewController(UIViewController(), animated: true)
+    _navigationController?.pushViewController(sharedResolver.resolve(TradingInfoController.self, argument: pSymbol)!, animated: true)
   }
 
   private var _navigationController: UINavigationController?

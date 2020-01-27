@@ -24,7 +24,7 @@ struct WeeklyTimeSeriesResponse: Decodable {
 
   private static var _dateFormatter: DateFormatter = {
     let lResult = DateFormatter()
-    lResult.dateFormat = "YYYY-MM-DD"
+    lResult.dateFormat = "YYYY-MM-dd"
     return lResult
   }()
 }
