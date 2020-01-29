@@ -29,6 +29,11 @@ class ChartController: UIViewController {
     }
     _chartView = lChart
     _observeChartData()
+    switch UIDevice.current.orientation {
+    case .portrait, .portraitUpsideDown:
+      UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue, forKey: "orientation")
+    default: ()
+    }
   }
 
   override func viewWillAppear(_ animated: Bool) {
