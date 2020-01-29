@@ -11,6 +11,8 @@
 		1D33DA5A23D8EAE800F1BF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D33DA5923D8EAE800F1BF09 /* Assets.xcassets */; };
 		1D33DA5D23D8EAE800F1BF09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D33DA5B23D8EAE800F1BF09 /* LaunchScreen.storyboard */; };
 		1D33DA6823D8EAE800F1BF09 /* NovartisTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D33DA6723D8EAE800F1BF09 /* NovartisTestTests.swift */; };
+		1D4F672023DF8A7900CDC733 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F671F23DF8A7900CDC733 /* Charts.framework */; };
+		1D4F672123DF8A7900CDC733 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F671F23DF8A7900CDC733 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1D8DB1E423D8F41700FFD9E3 /* AlphaVantage_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DB1DB23D8F41700FFD9E3 /* AlphaVantage_Core.framework */; };
 		1D8DB1EB23D8F41700FFD9E3 /* AlphaVantage_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DB1EA23D8F41700FFD9E3 /* AlphaVantage_CoreTests.swift */; };
 		1D8DB1ED23D8F41700FFD9E3 /* AlphaVantage_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8DB1DD23D8F41700FFD9E3 /* AlphaVantage_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,13 +46,16 @@
 		931AD0AAF109DCD8D8D30EEE /* WeeklyTimeSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD41ADD088602BA5085C0 /* WeeklyTimeSeriesResponse.swift */; };
 		931AD0F0B3A5F5ECF8E92CFB /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD76C9CE634BB9156223C /* ColorTheme.swift */; };
 		931AD17ED00FD3C70F4D528A /* RemoteSecurityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD70320968DA98FBDEF70 /* RemoteSecurityRepository.swift */; };
+		931AD218BEA69E9F2AC6955A /* YearlyChartModel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD5DA46E1B8F6ACFF7EA6 /* YearlyChartModel+Rx.swift */; };
 		931AD2754F2BEFA697E986EF /* UITableView+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC2BF6AD4FD845B0BDE8 /* UITableView+Reactive.swift */; };
+		931AD2B6BE0805955B3CF2C0 /* MonthlyTimeSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD6F0499B4B850F2AA67C /* MonthlyTimeSeriesResponse.swift */; };
 		931AD2EB0B426939DECE8210 /* GetSecurityImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD94BE1DD25DCBB0672DF /* GetSecurityImpl.swift */; };
 		931AD3BB14AB80AAD46407F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD7B50455153EAC6BA1E0 /* Router.swift */; };
 		931AD41CFA8EB6AF5B340E9E /* UINavigationController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD7CD38890A1A91FF330B /* UINavigationController+Rotation.swift */; };
 		931AD4A27745D1F008E43597 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD82B34E0E5C3F5A69854 /* PresentationAssembly.swift */; };
 		931AD4D46CAEC6F1D6722F7F /* TradingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADD05FE729F313D90AAB6 /* TradingInfo.swift */; };
 		931AD4F94D855EF799EE83A1 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD44D4716A68F3BCB2937 /* DataAssembly.swift */; };
+		931AD5296B040F15521FBB29 /* YearlyChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD7843990CDF966B0FC7E /* YearlyChartModel.swift */; };
 		931AD601AE4D9009A53CA636 /* DataRequest+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD0134FEC0467184CED22 /* DataRequest+Log.swift */; };
 		931AD6877641CA91C557B14E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADA1C5D7850FD1D5D65ED /* SearchController.swift */; };
 		931AD6926DF7A54272C362C7 /* SymbolWeeklyDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD262DC0AA49722A538C7 /* SymbolWeeklyDetailModel.swift */; };
@@ -67,6 +72,7 @@
 		931ADD98F84CA7C8B4222D24 /* SearchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD36CB23BFF363317CDBC /* SearchCellModel.swift */; };
 		931ADDB006FE9AC0EAE5D570 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD4828DF0D080BA53D503 /* Security.swift */; };
 		931ADE00FFBF4E12371BA7B9 /* AlphaVantageEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD334AC143FF9994BDAD3 /* AlphaVantageEndpoint.swift */; };
+		931ADE3696B0257894452F3F /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADABDBFE9F6E219AD6BB8 /* ChartController.swift */; };
 		931ADE654EE2D54D05369B4B /* RemoteSecurityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADEF9B49E43FDDE553CB2 /* RemoteSecurityRepository.swift */; };
 		931ADECB54519AD23FB5D298 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD76329D0A0E216FC5682 /* SearchModel.swift */; };
 		931ADF470A5249BC4492AD08 /* SymbolWeeklyDetailModel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADC560ED9AA49EF091495 /* SymbolWeeklyDetailModel+Rx.swift */; };
@@ -148,6 +154,7 @@
 				1D90550823DCF14E00072FA9 /* Swinject.framework in Embed Frameworks */,
 				1D8DB1F123D8F41700FFD9E3 /* AlphaVantage_Core.framework in Embed Frameworks */,
 				1D9054F023DBA44400072FA9 /* AlphaVantage_Core_iOS.framework in Embed Frameworks */,
+				1D4F672123DF8A7900CDC733 /* Charts.framework in Embed Frameworks */,
 				1D90550D23DCF19900072FA9 /* Alamofire.framework in Embed Frameworks */,
 				1D90551323DDFBB000072FA9 /* Differ.framework in Embed Frameworks */,
 				1D90551623DDFBBF00072FA9 /* Bond.framework in Embed Frameworks */,
@@ -168,6 +175,7 @@
 		1D33DA6323D8EAE800F1BF09 /* NovartisTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovartisTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D33DA6723D8EAE800F1BF09 /* NovartisTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovartisTestTests.swift; sourceTree = "<group>"; };
 		1D33DA6923D8EAE800F1BF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D4F671F23DF8A7900CDC733 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		1D8DB1DB23D8F41700FFD9E3 /* AlphaVantage_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlphaVantage_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8DB1DD23D8F41700FFD9E3 /* AlphaVantage_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlphaVantage_Core.h; sourceTree = "<group>"; };
 		1D8DB1DE23D8F41700FFD9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -199,10 +207,13 @@
 		931AD41E2FC95711BC9C6F63 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		931AD44D4716A68F3BCB2937 /* DataAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAssembly.swift; sourceTree = "<group>"; };
 		931AD4828DF0D080BA53D503 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		931AD5DA46E1B8F6ACFF7EA6 /* YearlyChartModel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YearlyChartModel+Rx.swift"; sourceTree = "<group>"; };
+		931AD6F0499B4B850F2AA67C /* MonthlyTimeSeriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyTimeSeriesResponse.swift; sourceTree = "<group>"; };
 		931AD70320968DA98FBDEF70 /* RemoteSecurityRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteSecurityRepository.swift; path = Repositories/RemoteSecurityRepository.swift; sourceTree = "<group>"; };
 		931AD75453B9070A63580C1D /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
 		931AD76329D0A0E216FC5682 /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		931AD76C9CE634BB9156223C /* ColorTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		931AD7843990CDF966B0FC7E /* YearlyChartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearlyChartModel.swift; sourceTree = "<group>"; };
 		931AD7B50455153EAC6BA1E0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		931AD7CD38890A1A91FF330B /* UINavigationController+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rotation.swift"; sourceTree = "<group>"; };
 		931AD82B34E0E5C3F5A69854 /* PresentationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
@@ -212,6 +223,7 @@
 		931AD94BE1DD25DCBB0672DF /* GetSecurityImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSecurityImpl.swift; sourceTree = "<group>"; };
 		931ADA1C5D7850FD1D5D65ED /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		931ADA9FE4C6166D5700E16F /* GetSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSecurity.swift; sourceTree = "<group>"; };
+		931ADABDBFE9F6E219AD6BB8 /* ChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
 		931ADB1D76FBD27B8920ED32 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		931ADC2BF6AD4FD845B0BDE8 /* UITableView+Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reactive.swift"; sourceTree = "<group>"; };
 		931ADC560ED9AA49EF091495 /* SymbolWeeklyDetailModel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SymbolWeeklyDetailModel+Rx.swift"; sourceTree = "<group>"; };
@@ -237,6 +249,7 @@
 				1D9054EF23DBA44400072FA9 /* AlphaVantage_Core_iOS.framework in Frameworks */,
 				1D90551223DDFBB000072FA9 /* Differ.framework in Frameworks */,
 				1D90550423DCF12600072FA9 /* AlphaVantage_Core_iOS.framework in Frameworks */,
+				1D4F672023DF8A7900CDC733 /* Charts.framework in Frameworks */,
 				1D90550A23DCF18400072FA9 /* SnapKit.framework in Frameworks */,
 				1D90550F23DDE06E00072FA9 /* ReactiveKit.framework in Frameworks */,
 			);
@@ -379,6 +392,7 @@
 		1D9054F723DBA5A000072FA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D4F671F23DF8A7900CDC733 /* Charts.framework */,
 				1D90551423DDFBBF00072FA9 /* Bond.framework */,
 				1D90551123DDFBB000072FA9 /* Differ.framework */,
 				1D90550E23DDE06E00072FA9 /* ReactiveKit.framework */,
@@ -441,6 +455,8 @@
 				931AD20DD7A8C36A4E2F4496 /* SearchModel+Rx.swift */,
 				931AD262DC0AA49722A538C7 /* SymbolWeeklyDetailModel.swift */,
 				931ADC560ED9AA49EF091495 /* SymbolWeeklyDetailModel+Rx.swift */,
+				931AD7843990CDF966B0FC7E /* YearlyChartModel.swift */,
+				931AD5DA46E1B8F6ACFF7EA6 /* YearlyChartModel+Rx.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -472,6 +488,7 @@
 				931ADCD0D20E4A1BD04285B7 /* TradingInfoResponse.swift */,
 				931AD3A55A89EE8513585101 /* TradingInfoImpl.swift */,
 				931AD41ADD088602BA5085C0 /* WeeklyTimeSeriesResponse.swift */,
+				931AD6F0499B4B850F2AA67C /* MonthlyTimeSeriesResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -534,6 +551,7 @@
 			children = (
 				931ADA1C5D7850FD1D5D65ED /* SearchController.swift */,
 				931ADCC54200F9CF357E0271 /* TradingInfoController.swift */,
+				931ADABDBFE9F6E219AD6BB8 /* ChartController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -798,6 +816,9 @@
 				931ADF470A5249BC4492AD08 /* SymbolWeeklyDetailModel+Rx.swift in Sources */,
 				931ADC277744A00DF9D72AAC /* TradingInfoController.swift in Sources */,
 				931AD41CFA8EB6AF5B340E9E /* UINavigationController+Rotation.swift in Sources */,
+				931AD5296B040F15521FBB29 /* YearlyChartModel.swift in Sources */,
+				931ADE3696B0257894452F3F /* ChartController.swift in Sources */,
+				931AD218BEA69E9F2AC6955A /* YearlyChartModel+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,6 +867,7 @@
 				931AD0AAF109DCD8D8D30EEE /* WeeklyTimeSeriesResponse.swift in Sources */,
 				931ADE654EE2D54D05369B4B /* RemoteSecurityRepository.swift in Sources */,
 				931AD4F94D855EF799EE83A1 /* DataAssembly.swift in Sources */,
+				931AD2B6BE0805955B3CF2C0 /* MonthlyTimeSeriesResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

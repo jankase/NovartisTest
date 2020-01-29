@@ -17,10 +17,6 @@ class TradingInfoController: UIViewController {
     fatalError("Not supported")
   }
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-  }
-
   override func loadView() {
     view = UIView()
     view.backgroundColor = .appBackgroundColor
@@ -37,11 +33,11 @@ class TradingInfoController: UIViewController {
   }
 
   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-    UIDevice.current.userInterfaceIdiom == .phone ? .landscape : .allButUpsideDown
+    UIDevice.current.userInterfaceIdiom == .phone ? .portrait : .allButUpsideDown
   }
 
   override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-    UIDevice.current.userInterfaceIdiom == .phone ? .landscapeLeft : .unknown
+    UIDevice.current.userInterfaceIdiom == .phone ? .portrait : .portrait
   }
 
   private var _model: SymbolWeeklyDetailModel

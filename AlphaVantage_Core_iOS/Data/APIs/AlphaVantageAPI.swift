@@ -38,11 +38,25 @@ class AlphaVantageAPI {
         }
   }
 
-  func getSymbolDetail(_ pSymbol: String, completion pCompletion: @escaping TradingInfoCompletionHandler) {
-    _sessionManager.request(AlphaVantageEndpoint.detail(_environment, pSymbol))
+  func getWeeklyTradingInfo(symbol pSymbol: String, completion pCompletion: @escaping TradingInfoCompletionHandler) {
+    _sessionManager.request(AlphaVantageEndpoint.weeklyTradingInfo(_environment, pSymbol))
         .validate(statusCode: 200..<300)
         .log()
         .responseObject(type: WeeklyTimeSeriesResponse.self) { pResult in
+          switch pResult {
+          case .success(let lTimeSeriesResponse):
+            pCompletion(.success(lTimeSeriesResponse?.timeSeries ?? []))
+          case .failure(let lError):
+            pCompletion(.failure(lError))
+          }
+        }
+  }
+
+  func getMonthlyTradingInfo(symbol pSymbol: String, completion pCompletion: @escaping TradingInfoCompletionHandler) {
+    _sessionManager.request(AlphaVantageEndpoint.monthlyTradingInfo(_environment, pSymbol))
+        .validate(statusCode: 200..<300)
+        .log()
+        .responseObject(type: MonthlyTimeSeriesResponse.self) { pResult in
           switch pResult {
           case .success(let lTimeSeriesResponse):
             pCompletion(.success(lTimeSeriesResponse?.timeSeries ?? []))

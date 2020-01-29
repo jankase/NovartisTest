@@ -10,14 +10,18 @@ public class GetSecurityImpl: GetSecurity {
     _repository = pRepository
   }
 
-  public func getSecurities(symbolCode pSymbolCode: String,
-                            completionHandler pCompletionHandler: @escaping (Result<[Security], Error>) -> Void) {
+  public func getSecurities(symbolCode pSymbolCode: String, completionHandler pCompletionHandler: @escaping SecurityCompletionHandler) {
     _repository.getRemoteSecurities(symbolCode: pSymbolCode, completionHandler: pCompletionHandler)
   }
 
-  public func getTradingInfo(symbolCode pSymbolCode: String,
-                             completionHandler pCompletionHandler: @escaping (Result<[TradingInfo], Error>) -> Void) {
-    _repository.getRemoteTradingInfo(symbolCode: pSymbolCode, completionHandler: pCompletionHandler)
+  public func getWeeklyTradingInfo(symbolCode pSymbolCode: String,
+                                   completionHandler pCompletionHandler: @escaping TradingInfoCompletionHandler) {
+    _repository.getRemoteWeeklyTradingInfo(symbolCode: pSymbolCode, completionHandler: pCompletionHandler)
+  }
+
+  public func getMonthlyTradingInfo(symbolCode pSymbolCode: String,
+                                    completionHandler pCompletionHandler: @escaping TradingInfoCompletionHandler) {
+    _repository.getRemoteMonthlyTradingInfo(symbolCode: pSymbolCode, completionHandler: pCompletionHandler)
   }
 
   private var _repository: RemoteSecurityRepository

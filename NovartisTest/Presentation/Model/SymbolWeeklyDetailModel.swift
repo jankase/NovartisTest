@@ -15,7 +15,7 @@ class SymbolWeeklyDetailModel: ReactiveExtensionsProvider {
   init(symbol pSymbol: String, useCase pUseCase: GetSecurity) {
     symbol = pSymbol
     _useCase = pUseCase
-    _useCase.getTradingInfo(symbolCode: pSymbol) { [weak self] pResult in
+    _useCase.getWeeklyTradingInfo(symbolCode: pSymbol) { [weak self] pResult in
       guard let lSelf = self else { return }
       switch pResult {
       case .success(let lTradingInfo):

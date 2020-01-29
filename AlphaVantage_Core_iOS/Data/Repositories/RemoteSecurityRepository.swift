@@ -15,8 +15,14 @@ struct RemoteSecurityRepositoryImpl: RemoteSecurityRepository {
     _api.searchSymbol(pSymbolCode, completion: pCompletionHandler)
   }
 
-  func getRemoteTradingInfo(symbolCode pSymbolCode: String, completionHandler pCompletionHandler: @escaping TradingInfoCompletionHandler) {
-    _api.getSymbolDetail(pSymbolCode, completion: pCompletionHandler)
+  func getRemoteWeeklyTradingInfo(symbolCode pSymbolCode: String,
+                                  completionHandler pCompletionHandler: @escaping TradingInfoCompletionHandler) {
+    _api.getWeeklyTradingInfo(symbol: pSymbolCode, completion: pCompletionHandler)
+  }
+
+  func getRemoteMonthlyTradingInfo(symbolCode pSymbolCode: String,
+                                   completionHandler pCompletionHandler: @escaping TradingInfoCompletionHandler) {
+    _api.getWeeklyTradingInfo(symbol: pSymbolCode, completion: pCompletionHandler)
   }
 
   private var _api: AlphaVantageAPI

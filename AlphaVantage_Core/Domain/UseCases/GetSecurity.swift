@@ -10,5 +10,6 @@ public typealias TradingInfoCompletionHandler = (Result<[TradingInfo], Error>) -
 
 public protocol GetSecurity {
   func getSecurities(symbolCode: String, completionHandler: @escaping SecurityCompletionHandler)
-  func getTradingInfo(symbolCode: String, completionHandler: @escaping TradingInfoCompletionHandler)
+  func getWeeklyTradingInfo(symbolCode: String, completionHandler: @escaping TradingInfoCompletionHandler)
+  func getMonthlyTradingInfo(symbolCode: String, completionHandler: @escaping TradingInfoCompletionHandler)
 }

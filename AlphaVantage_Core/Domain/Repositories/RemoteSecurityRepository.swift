@@ -7,5 +7,6 @@ import Foundation
 
 public protocol RemoteSecurityRepository {
   func getRemoteSecurities(symbolCode: String?, completionHandler: @escaping SecurityCompletionHandler)
-  func getRemoteTradingInfo(symbolCode: String, completionHandler: @escaping TradingInfoCompletionHandler)
+  func getRemoteWeeklyTradingInfo(symbolCode: String, completionHandler: @escaping TradingInfoCompletionHandler)
+  func getRemoteMonthlyTradingInfo(symbolCode: String, completionHandler: @escaping TradingInfoCompletionHandler)
 }
