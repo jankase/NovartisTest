@@ -29,9 +29,15 @@ class PresentationAssembly: Assembly {
         }
         .inObjectScope(.transient)
     pContainer
-        .register(YearlyChartModel.self) { (pResolver: Resolver, pSymbols: [String]) in
+        .register(YearlyChartModel?.self) { (pResolver: Resolver, pSymbols: [String]) in
           YearlyChartModel(symbols: pSymbols, useCase: pResolver.resolve(GetSecurity.self)!)
         }
         .inObjectScope(.transient)
+    pContainer.register(ChartController?.self) { (pResolver: Resolver, pSymbols: [String]) in
+      guard let lModel = pResolver.resolve(YearlyChartModel?.self, argument: pSymbols) as? YearlyChartModel else {
+        return nil
+      }
+      return ChartController(model: lModel)
+    }
   }
 }

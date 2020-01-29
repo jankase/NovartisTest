@@ -25,7 +25,8 @@ class YearlyChartModel: ReactiveExtensionsProvider {
   }
 
   func createCandleChartDataSet(symbol pSymbol: String, tradingInfo pTradingInfo: [TradingInfo]) -> CandleChartDataSet {
-    let lSortedTradingInfo = pTradingInfo.sorted { $0.date > $1.date }
+    let lBeforeOneYear = Calendar.current.date(byAdding: .init(year: -1), to: Date())!
+    let lSortedTradingInfo = pTradingInfo.filter { $0.date > lBeforeOneYear }.sorted { $0.date < $1.date }
     let lChartEntries = lSortedTradingInfo.enumerated().map { pIndex, pTradingInfo in
       CandleChartDataEntry(x: Double(pIndex),
                            shadowH: (pTradingInfo.high as NSDecimalNumber).doubleValue,

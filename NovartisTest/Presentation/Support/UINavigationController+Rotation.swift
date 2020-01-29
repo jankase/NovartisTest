@@ -15,4 +15,8 @@ extension UINavigationController {
   open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
     topViewController?.preferredInterfaceOrientationForPresentation ?? .portrait
   }
+
+  open override func shouldAutomaticallyForwardRotationMethods() -> Bool {
+    true
+  }
 }

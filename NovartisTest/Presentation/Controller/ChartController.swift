@@ -20,13 +20,20 @@ class ChartController: UIViewController {
   }
 
   override func loadView() {
-    let lChart = LineChartView()
+    view = UIView(frame: .zero)
+    view.backgroundColor = .appBackgroundColor
+    let lChart = CandleStickChartView()
     view.addSubview(lChart)
     lChart.snp.makeConstraints {
-      $0.leading.trailing.equalToSuperview()
-      $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-      $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+      $0.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
     }
+    _chartView = lChart
+    _observeChartData()
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    ChartController.attemptRotationToDeviceOrientation()
   }
 
   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -38,4 +45,14 @@ class ChartController: UIViewController {
   }
 
   private var _model: YearlyChartModel
+  private var _bag: DisposeBag = .init()
+  private weak var _chartView: CandleStickChartView?
+
+  private func _observeChartData() {
+    _model.reactive.chartData
+        .observeNext { [weak self] pChartData in
+          self?._chartView?.data = pChartData
+        }
+        .dispose(in: _bag)
+  }
 }

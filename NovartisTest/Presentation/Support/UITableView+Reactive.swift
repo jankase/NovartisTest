@@ -16,4 +16,30 @@ extension ReactiveExtensions where Base: UITableView {
           pSubject.send(pIndexPath)
         })
   }
+
+  var selectedIndexPath: SafeSignal<IndexPath> {
+    //swiftlint:disable:next trailing_closure
+    delegate.signal(for: #selector(UITableViewDelegate.tableView(_:didSelectRowAt:)),
+                    dispatch: { (pSubject: PassthroughSubject<IndexPath, Never>, _: UITableView, pIndexPath: IndexPath) in
+                      pSubject.send(pIndexPath)
+                    })
+  }
+
+  var deselectedIndexPath: SafeSignal<IndexPath> {
+    //swiftlint:disable:next trailing_closure
+    delegate.signal(for: #selector(UITableViewDelegate.tableView(_:didDeselectRowAt:)),
+                    dispatch: { (pSubject: PassthroughSubject<IndexPath, Never>, _: UITableView, pIndexPath: IndexPath) in
+                      pSubject.send(pIndexPath)
+                    })
+  }
+
+  var selectedIndexPaths: SafeSignal<[IndexPath]> {
+    merge(selectedIndexPath, deselectedIndexPath).map { _ in
+      self.base.indexPathsForSelectedRows ?? []
+    }
+  }
+
+  var numberOfSelectedRow: SafeSignal<Int> {
+    selectedIndexPaths.map { $0.count }
+  }
 }

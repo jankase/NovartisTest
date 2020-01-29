@@ -25,5 +25,12 @@ class Router {
     _navigationController?.pushViewController(sharedResolver.resolve(TradingInfoController.self, argument: pSymbol)!, animated: true)
   }
 
+  func showChart(symbols pSymbols: [String]) {
+    guard let lChartController = sharedResolver.resolve(ChartController?.self, argument: pSymbols) as? ChartController else {
+      return
+    }
+    _navigationController?.pushViewController(lChartController, animated: true)
+  }
+
   private var _navigationController: UINavigationController?
 }

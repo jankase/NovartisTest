@@ -12,6 +12,7 @@ class SearchModel: ReactiveExtensionsProvider {
   var searchUseCase: GetSecurity
   var errorMessageSubject: PassthroughSubject<String, Never> = .init()
   var cellsInfo: Property<[SearchCellModel]> = .init([])
+  var selectedSymbols: [String] = []
 
   init(searchUseCase pSearchUseCase: GetSecurity) {
     searchUseCase = pSearchUseCase

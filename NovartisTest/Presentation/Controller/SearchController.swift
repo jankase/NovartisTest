@@ -42,6 +42,17 @@ class SearchController: UIViewController {
       $0.top.equalTo(lSearchBar.snp.bottom)
       $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
     }
+    _tableView = lTableView
+    let lChartButton = UIBarButtonItem(title: "Compare", style: .plain, target: nil, action: nil)
+    lChartButton.isEnabled = false
+    navigationItem.rightBarButtonItem = lChartButton
+    _compareButton = lChartButton
+    _setupObserver()
+  }
+
+  private func _setupObserver() {
+    guard let lTableView = _tableView else { return }
+    _model.reactive.cells.observeNext { [weak self] _ in self?._compareButton?.isEnabled = false }.dispose(in: _bag)
     _model.reactive.cells.bind(to: lTableView, createCell: _createCell)
     lTableView.reactive.detailDisclosureTapped
         .observeNext { [weak self] pIndexPath in
@@ -51,7 +62,26 @@ class SearchController: UIViewController {
           }
         }
         .dispose(in: _bag)
-    _tableView = lTableView
+    lTableView.reactive
+        .numberOfSelectedRow
+        .observeNext { [weak self] pNumberOfRows in
+          self?._compareButton?.isEnabled = pNumberOfRows == 2
+        }
+        .dispose(in: _bag)
+    lTableView.reactive.selectedIndexPaths
+        .map { [weak self] (pIndexPaths: [IndexPath]) -> [String] in
+          guard let lSelf = self else { return [] }
+          return pIndexPaths.map { lSelf._model.cellsInfo.value[$0.row].symbol }
+        }
+        .observeNext { [weak self] in
+          self?._model.selectedSymbols = $0
+        }
+        .dispose(in: _bag)
+    _compareButton?.reactive.tap
+        .observeNext { [weak self] in
+          Router.shared.showChart(symbols: self?._model.selectedSymbols ?? [])
+        }
+        .dispose(in: _bag)
   }
 
   override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -64,6 +94,7 @@ class SearchController: UIViewController {
   private var _model: SearchModel
   private weak var _tableView: UITableView?
   private weak var _searchBar: UISearchBar?
+  private weak var _compareButton: UIBarButtonItem?
   private var _bag: DisposeBag = .init()
 
   private func _createCell(dataSource pDataSource: [SearchCellModel],
