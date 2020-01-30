@@ -17,4 +17,4 @@ Application is divided into several independent units:
 
 # Limitations
 
-At this moment missing only unit tests, which will be delivered during Thursday.
+Only AlphaVantage_Core is covered by unit tests.
