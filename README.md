@@ -3,16 +3,18 @@
 Application is using Carthage dependency management. Before compilation is necessary
 download and rebuild this dependencies by following command:
 
-`carthage update --platform ios --no-use-binaries --cache-builds`
+`carthage bootstrap --platform ios --no-use-binaries --cache-builds`
 
 For installation on physical device is necessary also change development team.
 
+# Code structure
+
+Application is divided into several independent units:
+
+- AlphaVantage_Core contains definition of entities and use cases on business level. It should be platform independent.
+- AlphaVantage_Core_iOS contains implementation of protocols defined in AlphaVantage_Core specific for iOS platform
+- NovartisTest contains application it self for iOS platform.
+
 # Limitations
 
-Because of limited time I was not able to deliver complete solution. Current solution
-has following limitations:
-
-- not implemented support for comparing two different securities
-- unit tests are not implemented
-- current implementation does not correctly forcing rotation of detail view with list
-of trades.
+At this moment missing only unit tests, which will be delivered during Thursday.
