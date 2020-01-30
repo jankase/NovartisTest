@@ -25,15 +25,25 @@ class TradingInfoCell: UITableViewCell {
   }
 
   private func _loadElements() {
-    _dateContainer = _addContainer(previousContainer: nil, alignment: .left)
-    _openContainer = _addContainer(previousContainer: _dateContainer)
-    _highContainer = _addContainer(previousContainer: _openContainer)
-    _lowContainer = _addContainer(previousContainer: _highContainer)
-    _closeContainer = _addContainer(previousContainer: _lowContainer, isLast: true)
+    if UIDevice.current.userInterfaceIdiom == .phone {
+      _dateContainer = _addContainer(previousContainer: nil, isLast: true, secondLine: false, alignment: .left)
+      _openContainer = _addContainer(previousContainer: nil, topView: _dateContainer)
+      _highContainer = _addContainer(previousContainer: _openContainer, topView: _dateContainer)
+      _lowContainer = _addContainer(previousContainer: _highContainer, topView: _dateContainer)
+      _closeContainer = _addContainer(previousContainer: _lowContainer, topView: _dateContainer, isLast: true)
+    } else {
+      _dateContainer = _addContainer(previousContainer: nil, alignment: .left)
+      _openContainer = _addContainer(previousContainer: _dateContainer)
+      _highContainer = _addContainer(previousContainer: _openContainer)
+      _lowContainer = _addContainer(previousContainer: _highContainer)
+      _closeContainer = _addContainer(previousContainer: _lowContainer, isLast: true)
+    }
   }
 
   private func _addContainer(previousContainer pPrevious: UIView?,
+                             topView pTop: UIView? = nil,
                              isLast pIsLast: Bool = false,
+                             secondLine pIsSecondLine: Bool = true,
                              alignment pAlignment: NSTextAlignment = .right) -> _TextContainer {
     let lResult = _TextContainer(alignment: pAlignment)
     contentView.addSubview(lResult)
@@ -42,11 +52,19 @@ class TradingInfoCell: UITableViewCell {
         $0.leading.equalTo(lPrevious.snp.trailing)
         $0.width.equalTo(lPrevious.snp.width)
       } else {
-        $0.leading.equalToSuperview().offset(5)
+        $0.leading.equalToSuperview().offset(10)
       }
-      $0.top.bottom.equalToSuperview().inset(10)
+      if let lTopView = pTop {
+        $0.top.equalTo(lTopView.snp.bottom).offset(10)
+        $0.height.equalTo(lTopView.snp.height)
+      } else {
+        $0.top.equalToSuperview().inset(10)
+      }
+      if pIsSecondLine {
+        $0.bottom.equalToSuperview().inset(10)
+      }
       if pIsLast {
-        $0.trailing.equalToSuperview().inset(5)
+        $0.trailing.equalToSuperview().inset(10)
       }
     }
     return lResult
