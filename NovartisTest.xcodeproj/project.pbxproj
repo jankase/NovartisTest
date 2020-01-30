@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,15 @@
 		1D33DA6823D8EAE800F1BF09 /* NovartisTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D33DA6723D8EAE800F1BF09 /* NovartisTestTests.swift */; };
 		1D4F672023DF8A7900CDC733 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F671F23DF8A7900CDC733 /* Charts.framework */; };
 		1D4F672123DF8A7900CDC733 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4F671F23DF8A7900CDC733 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1D8DB1E423D8F41700FFD9E3 /* AlphaVantage_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DB1DB23D8F41700FFD9E3 /* AlphaVantage_Core.framework */; };
-		1D8DB1EB23D8F41700FFD9E3 /* AlphaVantage_CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DB1EA23D8F41700FFD9E3 /* AlphaVantage_CoreTests.swift */; };
+		1D5786BA23E25D9900A3E2C3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5786B423E25D3E00A3E2C3 /* Nimble.framework */; };
+		1D5786BB23E25DA900A3E2C3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5786B623E25D5700A3E2C3 /* Quick.framework */; };
+		1D7CC59023E31A26000E9FBC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5786B423E25D3E00A3E2C3 /* Nimble.framework */; };
+		1D7CC59123E31A3A000E9FBC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5786B623E25D5700A3E2C3 /* Quick.framework */; };
+		1D7CC59223E31F72000E9FBC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5786B423E25D3E00A3E2C3 /* Nimble.framework */; platformFilter = ios; };
+		1D7CC59323E31F83000E9FBC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5786B623E25D5700A3E2C3 /* Quick.framework */; platformFilter = ios; };
+		1D7CC59623E320BA000E9FBC /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D7CC59523E320BA000E9FBC /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D7CC59823E320CF000E9FBC /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D7CC59723E320CF000E9FBC /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D8DB1E423D8F41700FFD9E3 /* AlphaVantage_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DB1DB23D8F41700FFD9E3 /* AlphaVantage_Core.framework */; platformFilter = ios; };
 		1D8DB1ED23D8F41700FFD9E3 /* AlphaVantage_Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D8DB1DD23D8F41700FFD9E3 /* AlphaVantage_Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D8DB1F023D8F41700FFD9E3 /* AlphaVantage_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DB1DB23D8F41700FFD9E3 /* AlphaVantage_Core.framework */; };
 		1D8DB1F123D8F41700FFD9E3 /* AlphaVantage_Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8DB1DB23D8F41700FFD9E3 /* AlphaVantage_Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,7 +58,9 @@
 		931AD2B6BE0805955B3CF2C0 /* MonthlyTimeSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD6F0499B4B850F2AA67C /* MonthlyTimeSeriesResponse.swift */; };
 		931AD2EB0B426939DECE8210 /* GetSecurityImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD94BE1DD25DCBB0672DF /* GetSecurityImpl.swift */; };
 		931AD3BB14AB80AAD46407F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD7B50455153EAC6BA1E0 /* Router.swift */; };
+		931AD409D51EC5AE972D45DD /* RemoteSecurityRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD8500E5103D00EBAFBE7 /* RemoteSecurityRepositoryMock.swift */; };
 		931AD41CFA8EB6AF5B340E9E /* UINavigationController+Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD7CD38890A1A91FF330B /* UINavigationController+Rotation.swift */; };
+		931AD4A0E2EA60E924268797 /* TradingInfoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADAC0C76EE047F1C3E55A /* TradingInfoMock.swift */; };
 		931AD4A27745D1F008E43597 /* PresentationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD82B34E0E5C3F5A69854 /* PresentationAssembly.swift */; };
 		931AD4D46CAEC6F1D6722F7F /* TradingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADD05FE729F313D90AAB6 /* TradingInfo.swift */; };
 		931AD4F94D855EF799EE83A1 /* DataAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD44D4716A68F3BCB2937 /* DataAssembly.swift */; };
@@ -69,9 +78,11 @@
 		931ADCDF2923579BA0A9C380 /* GetSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADA9FE4C6166D5700E16F /* GetSecurity.swift */; };
 		931ADD4160DCE112A1E3D937 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD75453B9070A63580C1D /* Security.swift */; };
 		931ADD7CC436EDC03F5289D4 /* AlphaVantageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD26FE0DB5F7B1CEEA7E0 /* AlphaVantageAPI.swift */; };
+		931ADD95B93A5ED2D60607B3 /* SecurityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD493571D5F05FF5574C7 /* SecurityMock.swift */; };
 		931ADD98F84CA7C8B4222D24 /* SearchCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD36CB23BFF363317CDBC /* SearchCellModel.swift */; };
 		931ADDB006FE9AC0EAE5D570 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD4828DF0D080BA53D503 /* Security.swift */; };
 		931ADE00FFBF4E12371BA7B9 /* AlphaVantageEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD334AC143FF9994BDAD3 /* AlphaVantageEndpoint.swift */; };
+		931ADE16EC4C66CBF5CF836B /* GetSecuritySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD29631DF0DD0FC18C673 /* GetSecuritySpec.swift */; };
 		931ADE3696B0257894452F3F /* ChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADABDBFE9F6E219AD6BB8 /* ChartController.swift */; };
 		931ADE654EE2D54D05369B4B /* RemoteSecurityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931ADEF9B49E43FDDE553CB2 /* RemoteSecurityRepository.swift */; };
 		931ADECB54519AD23FB5D298 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931AD76329D0A0E216FC5682 /* SearchModel.swift */; };
@@ -93,13 +104,6 @@
 			remoteGlobalIDString = 1D8DB1DA23D8F41700FFD9E3;
 			remoteInfo = AlphaVantage_Core;
 		};
-		1D8DB1E723D8F41700FFD9E3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D33DA4323D8EAE700F1BF09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D33DA4A23D8EAE700F1BF09;
-			remoteInfo = NovartisTest;
-		};
 		1D8DB1EE23D8F41700FFD9E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D33DA4323D8EAE700F1BF09 /* Project object */;
@@ -113,13 +117,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1D9054D923DBA44400072FA9;
 			remoteInfo = AlphaVantage_Core_iOS;
-		};
-		1D9054E623DBA44400072FA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D33DA4323D8EAE700F1BF09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D33DA4A23D8EAE700F1BF09;
-			remoteInfo = NovartisTest;
 		};
 		1D9054ED23DBA44400072FA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -145,6 +142,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1D7CC59423E32090000E9FBC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D7CC59823E320CF000E9FBC /* Quick.framework in CopyFiles */,
+				1D7CC59623E320BA000E9FBC /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D8DB1F223D8F41700FFD9E3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,11 +184,14 @@
 		1D33DA6723D8EAE800F1BF09 /* NovartisTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovartisTestTests.swift; sourceTree = "<group>"; };
 		1D33DA6923D8EAE800F1BF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D4F671F23DF8A7900CDC733 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		1D5786B423E25D3E00A3E2C3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		1D5786B623E25D5700A3E2C3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		1D7CC59523E320BA000E9FBC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		1D7CC59723E320CF000E9FBC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		1D8DB1DB23D8F41700FFD9E3 /* AlphaVantage_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlphaVantage_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8DB1DD23D8F41700FFD9E3 /* AlphaVantage_Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlphaVantage_Core.h; sourceTree = "<group>"; };
 		1D8DB1DE23D8F41700FFD9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8DB1E323D8F41700FFD9E3 /* AlphaVantage_CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaVantage_CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D8DB1EA23D8F41700FFD9E3 /* AlphaVantage_CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaVantage_CoreTests.swift; sourceTree = "<group>"; };
 		1D8DB1EC23D8F41700FFD9E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D9054DA23DBA44400072FA9 /* AlphaVantage_Core_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlphaVantage_Core_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9054DC23DBA44400072FA9 /* AlphaVantage_Core_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlphaVantage_Core_iOS.h; sourceTree = "<group>"; };
@@ -199,6 +210,7 @@
 		931AD20DD7A8C36A4E2F4496 /* SearchModel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchModel+Rx.swift"; sourceTree = "<group>"; };
 		931AD262DC0AA49722A538C7 /* SymbolWeeklyDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SymbolWeeklyDetailModel.swift; sourceTree = "<group>"; };
 		931AD26FE0DB5F7B1CEEA7E0 /* AlphaVantageAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaVantageAPI.swift; sourceTree = "<group>"; };
+		931AD29631DF0DD0FC18C673 /* GetSecuritySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSecuritySpec.swift; sourceTree = "<group>"; };
 		931AD334AC143FF9994BDAD3 /* AlphaVantageEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaVantageEndpoint.swift; sourceTree = "<group>"; };
 		931AD36CB23BFF363317CDBC /* SearchCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCellModel.swift; sourceTree = "<group>"; };
 		931AD3A55A89EE8513585101 /* TradingInfoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingInfoImpl.swift; sourceTree = "<group>"; };
@@ -207,6 +219,7 @@
 		931AD41E2FC95711BC9C6F63 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		931AD44D4716A68F3BCB2937 /* DataAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAssembly.swift; sourceTree = "<group>"; };
 		931AD4828DF0D080BA53D503 /* Security.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		931AD493571D5F05FF5574C7 /* SecurityMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityMock.swift; sourceTree = "<group>"; };
 		931AD5DA46E1B8F6ACFF7EA6 /* YearlyChartModel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YearlyChartModel+Rx.swift"; sourceTree = "<group>"; };
 		931AD6F0499B4B850F2AA67C /* MonthlyTimeSeriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyTimeSeriesResponse.swift; sourceTree = "<group>"; };
 		931AD70320968DA98FBDEF70 /* RemoteSecurityRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteSecurityRepository.swift; path = Repositories/RemoteSecurityRepository.swift; sourceTree = "<group>"; };
@@ -217,13 +230,16 @@
 		931AD7B50455153EAC6BA1E0 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		931AD7CD38890A1A91FF330B /* UINavigationController+Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Rotation.swift"; sourceTree = "<group>"; };
 		931AD82B34E0E5C3F5A69854 /* PresentationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationAssembly.swift; sourceTree = "<group>"; };
+		931AD8500E5103D00EBAFBE7 /* RemoteSecurityRepositoryMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSecurityRepositoryMock.swift; sourceTree = "<group>"; };
 		931AD8ADCE118B3FA7A104B2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		931AD92F185AD493EF59DA2E /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		931AD94312A3FA5EE7FD22F3 /* WeeklyTradingInfoCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeeklyTradingInfoCellModel.swift; sourceTree = "<group>"; };
 		931AD94BE1DD25DCBB0672DF /* GetSecurityImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSecurityImpl.swift; sourceTree = "<group>"; };
+		931AD9556CA829C1FE0E7F97 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = file.private; path = Cartfile.private; sourceTree = "<group>"; };
 		931ADA1C5D7850FD1D5D65ED /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		931ADA9FE4C6166D5700E16F /* GetSecurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSecurity.swift; sourceTree = "<group>"; };
 		931ADABDBFE9F6E219AD6BB8 /* ChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartController.swift; sourceTree = "<group>"; };
+		931ADAC0C76EE047F1C3E55A /* TradingInfoMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradingInfoMock.swift; sourceTree = "<group>"; };
 		931ADB1D76FBD27B8920ED32 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		931ADC2BF6AD4FD845B0BDE8 /* UITableView+Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reactive.swift"; sourceTree = "<group>"; };
 		931ADC560ED9AA49EF091495 /* SymbolWeeklyDetailModel+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SymbolWeeklyDetailModel+Rx.swift"; sourceTree = "<group>"; };
@@ -259,6 +275,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7CC59123E31A3A000E9FBC /* Quick.framework in Frameworks */,
+				1D7CC59023E31A26000E9FBC /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +291,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7CC59323E31F83000E9FBC /* Quick.framework in Frameworks */,
+				1D7CC59223E31F72000E9FBC /* Nimble.framework in Frameworks */,
 				1D8DB1E423D8F41700FFD9E3 /* AlphaVantage_Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +311,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D5786BB23E25DA900A3E2C3 /* Quick.framework in Frameworks */,
+				1D5786BA23E25D9900A3E2C3 /* Nimble.framework in Frameworks */,
 				1D9054E323DBA44400072FA9 /* AlphaVantage_Core_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +323,8 @@
 		1D33DA4223D8EAE700F1BF09 = {
 			isa = PBXGroup;
 			children = (
+				1D7CC59723E320CF000E9FBC /* Quick.framework */,
+				1D7CC59523E320BA000E9FBC /* Nimble.framework */,
 				1D33DA4D23D8EAE700F1BF09 /* NovartisTest */,
 				1D33DA6623D8EAE800F1BF09 /* NovartisTestTests */,
 				1D8DB1DC23D8F41700FFD9E3 /* AlphaVantage_Core */,
@@ -313,6 +337,7 @@
 				931AD41E2FC95711BC9C6F63 /* README.md */,
 				931AD92F185AD493EF59DA2E /* Cartfile */,
 				1D9054F723DBA5A000072FA9 /* Frameworks */,
+				931AD9556CA829C1FE0E7F97 /* Cartfile.private */,
 			);
 			sourceTree = "<group>";
 		};
@@ -364,8 +389,8 @@
 		1D8DB1E923D8F41700FFD9E3 /* AlphaVantage_CoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				1D8DB1EA23D8F41700FFD9E3 /* AlphaVantage_CoreTests.swift */,
 				1D8DB1EC23D8F41700FFD9E3 /* Info.plist */,
+				931AD95DCBBDD82C80309B10 /* Domain */,
 			);
 			path = AlphaVantage_CoreTests;
 			sourceTree = "<group>";
@@ -392,6 +417,8 @@
 		1D9054F723DBA5A000072FA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D5786B623E25D5700A3E2C3 /* Quick.framework */,
+				1D5786B423E25D3E00A3E2C3 /* Nimble.framework */,
 				1D4F671F23DF8A7900CDC733 /* Charts.framework */,
 				1D90551423DDFBBF00072FA9 /* Bond.framework */,
 				1D90551123DDFBB000072FA9 /* Differ.framework */,
@@ -410,6 +437,15 @@
 				931AD94312A3FA5EE7FD22F3 /* WeeklyTradingInfoCellModel.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		931AD1CF41C515CB815B1BBB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				931AD493571D5F05FF5574C7 /* SecurityMock.swift */,
+				931ADAC0C76EE047F1C3E55A /* TradingInfoMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		931AD2A39BBAE80EED9D176A /* Data */ = {
@@ -471,6 +507,14 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		931AD6BDFC4302A7C430FDE0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				931AD29631DF0DD0FC18C673 /* GetSecuritySpec.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		931AD73B3708A298DA340CAE /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +522,14 @@
 				931AD94BE1DD25DCBB0672DF /* GetSecurityImpl.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		931AD746B732D1D5B18804B9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				931AD8500E5103D00EBAFBE7 /* RemoteSecurityRepositoryMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		931AD87DD22B2E17236F9826 /* Entities */ = {
@@ -493,12 +545,38 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		931AD95DCBBDD82C80309B10 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				931AD9D2CC2EB57F4BA42CC5 /* Repositories */,
+				931AD6BDFC4302A7C430FDE0 /* UseCases */,
+				931ADA72706D93B3A9FCEE09 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		931AD9D2CC2EB57F4BA42CC5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				931AD746B732D1D5B18804B9 /* Mocks */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		931ADA699F81AB5F8D0728AD /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				931ADEF9B49E43FDDE553CB2 /* RemoteSecurityRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		931ADA72706D93B3A9FCEE09 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				931AD1CF41C515CB815B1BBB /* Mocks */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		931ADCB9F3EA400975E0D247 /* Presentation */ = {
@@ -642,12 +720,12 @@
 				1D8DB1DF23D8F41700FFD9E3 /* Sources */,
 				1D8DB1E023D8F41700FFD9E3 /* Frameworks */,
 				1D8DB1E123D8F41700FFD9E3 /* Resources */,
+				1D7CC59423E32090000E9FBC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				1D8DB1E623D8F41700FFD9E3 /* PBXTargetDependency */,
-				1D8DB1E823D8F41700FFD9E3 /* PBXTargetDependency */,
 			);
 			name = AlphaVantage_CoreTests;
 			productName = AlphaVantage_CoreTests;
@@ -685,7 +763,6 @@
 			);
 			dependencies = (
 				1D9054E523DBA44400072FA9 /* PBXTargetDependency */,
-				1D9054E723DBA44400072FA9 /* PBXTargetDependency */,
 			);
 			name = AlphaVantage_Core_iOSTests;
 			productName = AlphaVantage_Core_iOSTests;
@@ -707,21 +784,18 @@
 					};
 					1D33DA6223D8EAE800F1BF09 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 1D33DA4A23D8EAE700F1BF09;
 					};
 					1D8DB1DA23D8F41700FFD9E3 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					1D8DB1E223D8F41700FFD9E3 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 1D33DA4A23D8EAE700F1BF09;
 					};
 					1D9054D923DBA44400072FA9 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 					1D9054E123DBA44400072FA9 = {
 						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 1D33DA4A23D8EAE700F1BF09;
 					};
 				};
 			};
@@ -846,7 +920,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8DB1EB23D8F41700FFD9E3 /* AlphaVantage_CoreTests.swift in Sources */,
+				931ADD95B93A5ED2D60607B3 /* SecurityMock.swift in Sources */,
+				931AD4A0E2EA60E924268797 /* TradingInfoMock.swift in Sources */,
+				931AD409D51EC5AE972D45DD /* RemoteSecurityRepositoryMock.swift in Sources */,
+				931ADE16EC4C66CBF5CF836B /* GetSecuritySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -889,13 +966,9 @@
 		};
 		1D8DB1E623D8F41700FFD9E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 1D8DB1DA23D8F41700FFD9E3 /* AlphaVantage_Core */;
 			targetProxy = 1D8DB1E523D8F41700FFD9E3 /* PBXContainerItemProxy */;
-		};
-		1D8DB1E823D8F41700FFD9E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D33DA4A23D8EAE700F1BF09 /* NovartisTest */;
-			targetProxy = 1D8DB1E723D8F41700FFD9E3 /* PBXContainerItemProxy */;
 		};
 		1D8DB1EF23D8F41700FFD9E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -906,11 +979,6 @@
 			isa = PBXTargetDependency;
 			target = 1D9054D923DBA44400072FA9 /* AlphaVantage_Core_iOS */;
 			targetProxy = 1D9054E423DBA44400072FA9 /* PBXContainerItemProxy */;
-		};
-		1D9054E723DBA44400072FA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1D33DA4A23D8EAE700F1BF09 /* NovartisTest */;
-			targetProxy = 1D9054E623DBA44400072FA9 /* PBXContainerItemProxy */;
 		};
 		1D9054EE23DBA44400072FA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1105,9 +1173,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NovartisTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1119,7 +1190,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovartisTest.app/NovartisTest";
 			};
 			name = Debug;
 		};
@@ -1127,9 +1197,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = NovartisTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1141,7 +1214,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovartisTest.app/NovartisTest";
 			};
 			name = Release;
 		};
@@ -1209,6 +1281,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlphaVantage_CoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1220,7 +1296,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovartisTest.app/NovartisTest";
 			};
 			name = Debug;
 		};
@@ -1230,6 +1305,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlphaVantage_CoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1241,7 +1320,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovartisTest.app/NovartisTest";
 			};
 			name = Release;
 		};
@@ -1317,6 +1395,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlphaVantage_Core_iOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1328,7 +1410,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovartisTest.app/NovartisTest";
 			};
 			name = Debug;
 		};
@@ -1338,6 +1419,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8WS8N285FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AlphaVantage_Core_iOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1349,7 +1434,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovartisTest.app/NovartisTest";
 			};
 			name = Release;
 		};
