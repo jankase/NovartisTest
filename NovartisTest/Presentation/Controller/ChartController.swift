@@ -19,6 +19,11 @@ class ChartController: UIViewController {
     fatalError("Not supported")
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    _observeErrorMessage()
+  }
+
   override func loadView() {
     view = UIView(frame: .zero)
     view.backgroundColor = .appBackgroundColor
@@ -59,5 +64,13 @@ class ChartController: UIViewController {
           self?._chartView?.data = pChartData
         }
         .dispose(in: _bag)
+  }
+
+  private func _observeErrorMessage() {
+    _model.reactive.errorMessage.receive(on: DispatchQueue.main).observeNext {
+      let lAlert = UIAlertController(title: nil, message: $0, preferredStyle: .alert)
+      lAlert.addAction(.init(title: "OK", style: .default))
+      self.present(lAlert, animated: true)
+    }.dispose(in: _bag)
   }
 }

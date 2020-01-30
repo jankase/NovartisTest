@@ -9,6 +9,10 @@ import Foundation
 import ReactiveKit
 
 extension ReactiveExtensions where Base: YearlyChartModel {
+  var errorMessage: SafeSignal<String> {
+    base.errorMessageSubject.toSignal()
+  }
+
   var monthlyInfoDownloaded: SafeSignal<(String, [TradingInfo])> {
     base.monthlyInfoDownloaded.map { ($0, self.base.tradingInfos[$0]!) }
   }

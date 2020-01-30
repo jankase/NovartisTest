@@ -19,6 +19,11 @@ class SearchController: UIViewController {
     fatalError("Not supported")
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    _observeErrorMessage()
+  }
+
   override func loadView() {
     view = UIView(frame: .zero)
     view.backgroundColor = .appBackgroundColor
@@ -109,5 +114,13 @@ class SearchController: UIViewController {
     lCell?.detailTextLabel?.text = lModel.subtitle
     lCell?.accessoryType = .detailButton
     return lCell!
+  }
+
+  private func _observeErrorMessage() {
+    _model.reactive.errorMessage.receive(on: DispatchQueue.main).observeNext {
+      let lAlert = UIAlertController(title: nil, message: $0, preferredStyle: .alert)
+      lAlert.addAction(.init(title: "OK", style: .default))
+      self.present(lAlert, animated: true)
+    }.dispose(in: _bag)
   }
 }

@@ -42,8 +42,17 @@ class TradingInfoController: UIViewController {
 
   private var _model: SymbolWeeklyDetailModel
   weak private var _tableView: UITableView?
+  private var _bag: DisposeBag = .init()
 
   private func _setupCell(cell pCell: TradingInfoCell, tradingInfo pTradingInfo: WeeklyTradingInfoCellModel) {
     pCell.applyModel(pTradingInfo)
+  }
+
+  private func _observeErrorMessage() {
+    _model.reactive.errorMessage.receive(on: DispatchQueue.main).observeNext {
+      let lAlert = UIAlertController(title: nil, message: $0, preferredStyle: .alert)
+      lAlert.addAction(.init(title: "OK", style: .default))
+      self.present(lAlert, animated: true)
+    }.dispose(in: _bag)
   }
 }
